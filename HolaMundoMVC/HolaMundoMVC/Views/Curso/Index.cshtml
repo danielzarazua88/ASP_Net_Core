@@ -1,0 +1,25 @@
+﻿@model Curso
+
+@{
+    ViewData["Title"] = "Informacion Curso";
+    Layout = "_Layout";
+}
+<h1>@ViewData["Title"]</h1>
+<h2>@ViewBag.MensajeExtra</h2>
+
+<div class="input-group mb-3">
+    <div class="input-group-prepend">
+        <span class="input-group-text" id="basic-addon1">Curso: </span>
+    </div>
+    <input class="form-control" type="text" placeholder="@Model.Nombre" readonly>
+</div>
+<div class="input-group mb-3">
+    <div class="input-group-prepend">
+        <span class="input-group-text" id="basic-addon1">Curso: </span>
+    </div>
+    <input class="form-control" type="text" placeholder="@Model.Id" readonly>
+</div>
+<div>
+    <a type="button" class="btn btn-primary" href="~/Curso/MultiCurso">Regresar</a>
+</div>
+<p><i>@ViewBag.Fecha</i></p>

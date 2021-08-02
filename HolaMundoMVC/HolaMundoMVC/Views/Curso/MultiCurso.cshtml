@@ -1,0 +1,32 @@
+﻿@model IEnumerable<Curso>
+
+@{
+    ViewData["Title"] = "Informacion Curso";
+}
+<h1>@ViewData["Title"]</h1>
+<div>
+    <a class="btn btn-success" href="~/Curso/Create/">Agregar</a>
+</div>
+<table class="table table-dark table-hover table-sm" >
+    <thead>
+        <tr>
+            <th scope="col">Nombre</th>
+            <th scope="col">Id</th>
+            <th scope="col">Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+            @foreach(var curso in Model)
+            {
+            <tr>
+                <td>@curso.Nombre</td>
+                <td>@curso.Id</td>
+                <td>
+                    <a class="btn btn-primary" href="~/Curso/Edit/@curso.Id">Editar</a>
+                    <a class="btn btn-danger" href="~/Curso/Delete/@curso.Id">Eliminar</a>
+                </td>
+            </tr>
+            }
+    </tbody>
+</table>
+<p><i>@ViewBag.Fecha</i></p>

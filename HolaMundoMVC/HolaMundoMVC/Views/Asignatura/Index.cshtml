@@ -1,0 +1,30 @@
+﻿@model Asignatura
+
+@{
+    ViewData["Title"] = "Informacion Asignatura";
+    Layout = "Simple";
+}
+<h1>@ViewData["Title"]</h1>
+
+<div class="input-group mb-3">
+    <div class="input-group-prepend">
+        <span class="input-group-text" id="basic-addon1">Asignatura: </span>
+    </div>
+    <input class="form-control" type="text" placeholder="@Model.Nombre" readonly>
+</div>
+<div class="input-group mb-3">
+    <div class="input-group-prepend">
+        <span class="input-group-text" id="basic-addon1">Id: </span>
+    </div>
+    <input class="form-control" type="text" placeholder="@Model.Id" readonly>
+</div>
+<div class="input-group mb-3">
+    <div class="input-group-prepend">
+        <span class="input-group-text" id="basic-addon1">Curso: </span>
+    </div>
+    <input class="form-control" type="text" placeholder="@Model.Curso.Nombre" readonly>
+</div>
+<div>
+    <a type="button" class="btn btn-primary" href="~/Asignatura/MultiAsignatura">Regresar</a>
+</div>
+<p><i>@ViewBag.Fecha</i></p>
